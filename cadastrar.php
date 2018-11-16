@@ -1,6 +1,4 @@
 ﻿<?php
-//oeeeee2345
-//aa
 //isere o menu na página cadastrar.php
 include "./menu.php";
 //realiza a conexão com o BD
