@@ -15,7 +15,7 @@ include "./conexao.php";
 
             body { 
                 width: 100%;
-                
+
                 font-family: 'Open Sans', sans-serif;
                 background: #092756;
                 background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
@@ -26,7 +26,7 @@ include "./conexao.php";
                 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
             }
 
-            input, textarea { 
+            input, textarea, select { 
                 margin-left: 10;
                 margin-right: 10;
 
@@ -55,125 +55,273 @@ include "./conexao.php";
             label{
                 color: darkgray;
             }
+            .martex{
+                margin-left: 300px;
+                margin-right: 300px;
+            }
         </style>
     </head>
     <body>
         <form method="GET" action="cadastrar.php">
-            
+
             <br><br>
+            
             <div align="center">
+
+                <legend><strong>Cadastre-se</strong></legend>
+                <br>
+                <label>Data de cadastro:</label> <!-- colocar no banco e definir o 'name' -->
+                <input type="date" name="nome">
+                <br><br>
                 
-                    <legend><strong>Cadastre-se</strong></legend>
-                    <br>
-                    <label>Data de cadastro:</label> <!-- colocar no banco e definir o 'name' -->
-                    <input type="date" name="nome">
-                    <br><br>
-                    
-                    <input type="text" name="nome" placeholder="Nome">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="RG">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome"placeholder="CPF">
-                    <br><br>
-                    <label>Sexo:</label> <!-- colocar no banco e definir o 'name' -->
-                    <br>
-                    <label>Masculino</label>
-                    <input type="radio" name="sexo" value="m">
-                    <label>Feminino</label>
-                    <input type="radio" name="sexo" value="f">
-                    <label>Outro</label>
-                    <input type="radio" name="sexo" value="o">
-                    
-                    <br><br>
-                    <label>Estado civil:</label><br> <!-- colocar no banco e definir o 'name' -->
-                    <select>
-                        <option name='xxx'>xxx</option>
-                        <option name='xxx'>xxx</option>
-                        <option name='xxx'>xxx</option>
-                    </select>
-                    <br><br>
-                    <label>Escolaridade:</label><br> <!-- colocar no banco e definir o 'name' -->
-                    <select>
-                        <option name='xxx'>xxx</option>
-                        <option name='xxx'>xxx</option>
-                        <option name='xxx'>xxx</option>
-                    </select>
-                    <br><br>
-                    
-                    <input type="email" name="email" placeholder="Email">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                     <input type="text" name="nome" placeholder="Profissão">
-                    <br><br>
-                    <label>Data de nascimento:</label>
-                    <input type="date" name="data">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="Endereço">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="Número de residência">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="Bairro">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="CEP">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="Cidade">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="UF">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="Celular">
-                    <br><br>
-                     <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="Altura">
-                    <br><br>
-                    <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="Peso">
-                    <br><br>
-                    <label>Dia(s) da semana de aula:</label> <!-- colocar no banco e definir o 'name' -->
-                    <input type="date" name="nome">
-                    <br><br>
-                    <label>Horário de início:</label> <!-- colocar no banco e definir o 'name' -->
-                    <input type="time" name="nome">
-                    <br><br>
-                    <label>Tempo de aula:</label>
-                    <input type="time" name="hora">
-                    <br><br>
-                    <!-- colocar no banco e definir o 'name' -->
-                    <input type="text" name="nome" placeholder="Mensalidade">
-                    <br><br>
-                    <label>Problemas de saúde:</label><br> <!-- colocar no banco e definir o 'name' -->
-                    <textarea>
+                <input type="text" name="nome" placeholder="Nome">
+                <br><br>
                 
-                    </textarea>
-                    <br><br>
-                    <label>Receber Publicidade:</label> <!-- retirar do banco -->
-                    <br>
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="RG">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome"placeholder="CPF">
+                <br><br>
+                
+                <label>Sexo:</label> <!-- colocar no banco e definir o 'name' -->
+                <br>
+                <label>Masculino</label>
+                <input type="radio" name="sexo" value="m">
+                <label>Feminino</label>
+                <input type="radio" name="sexo" value="f">
+                <label>Outro</label>
+                <input type="radio" name="sexo" value="o"> 
+                <br><br>
+                
+                <label>Estado civil:</label> <!-- colocar no banco e definir o 'name' -->
+                <select>
+                    <option name='Solteiro'>Solteiro</option>
+                    <option name='Casado'>Casado</option>
+                    <option name='SVO'>Separado/Viúvo/Outro</option>
+                </select>
+                <br><br>
+                
+                <label>Escolaridade:</label> <!-- colocar no banco e definir o 'name' -->
+                <select>
+                    <option name='EFI'>Ensino Fundamental Incompleto</option>
+                    <option name='EFC'>Ensino Fundamental Completo</option>
+                    <option name='EMI'>Ensino Médio Incompleto</option>
+                    <option name='EMC'>Ensino Médio Completo</option>
+                    <option name='ESI'>Ensino Superior Incompleto</option>
+                    <option name='ESC'>Ensino Superior Completo</option>
+                </select>
+                <br><br>
+                
+                <input type="email" name="email" placeholder="Email">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="Profissão">
+                <br><br>
+                
+                <label>Data de nascimento:</label>
+                <input type="date" name="data">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="Endereço">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="Número de residência">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="Bairro">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="CEP">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="Cidade">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="UF">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="Celular">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="Altura">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="Peso">
+                <br><br>
+                
+                <label>Dia(s) da semana de aula:</label> <!-- colocar no banco e definir o 'name' -->
+                <input type="date" name="nome">
+                <br><br>
+                
+                <label>Horário de início:</label> <!-- colocar no banco e definir o 'name' -->
+                <input type="time" name="nome">
+                <br><br>
+                
+                <label>Tempo de aula:</label>
+                <input type="time" name="hora">
+                <br><br>
+                
+                <!-- colocar no banco e definir o 'name' -->
+                <input type="text" name="nome" placeholder="Mensalidade">
+                <br><br>
+                
+                <label>Problemas de saúde:</label><br> <!-- colocar no banco e definir o 'name' -->
+                <textarea></textarea>
+                <br><br>
+                
+
+                <legend><strong>Questionário de prontidão<br>para atividade física</strong></legend>
+                <br>
+
+                <label>Algum médico já disse que você possui<br>algum problema de coração
+                    ou pressão arterial,<br>e que somente deveria realizar atividade física<br>
+                    supervisionado por profissionais de saúde?</label>
+                <div>
                     <label>Sim</label>
                     <input type="radio" name="rec_pub" value="Sim">
                     <label>Não</label>
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                    <br><br>
-                    <input class="baaaaaaa" type="submit" value="Enviar">
-                    <br>
+                </div>
+                <br><br>
                 
+                <label>Você sente dores no peito quando pratica<br> atividade física?</label> <!-- colocar no banco e definir o 'name' -->
+                <br><br>
+                
+                <div>
+                    <label>Sim</label>
+                    <input type="radio" name="rec_pub" value="Sim">
+                    <label>Não</label>
+                    <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
+                    <input type="radio" name="rec_pub" value="Não">
+                </div>
+                <br><br>
+                
+                <label>No último mês, você sentiu dores no peito<br> ao praticar atividade física?</label> <!-- colocar no banco e definir o 'name' -->
+                <br><br>
+                
+                <div>
+                    <label>Sim</label>
+                    <input type="radio" name="rec_pub" value="Sim">
+                    <label>Não</label>
+                    <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
+                    <input type="radio" name="rec_pub" value="Não">
+                </div>
+                <br><br>
+                
+                <label>Você apresenta algum desequilíbrio devido à<br> tontura e/ou perda
+                    momentânea da consciência?</label> <!-- colocar no banco e definir o 'name' -->
+                <br><br>
+                
+                <div>
+                    <label>Sim</label>
+                    <input type="radio" name="rec_pub" value="Sim">
+                    <label>Não</label>
+                    <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
+                    <input type="radio" name="rec_pub" value="Não">
+                </div>
+                <br><br>
+                
+                <label>Você possui algum problema ósseo ou articular,<br> que pode ser
+                    afetado ou agravado pela atividade física?</label> <!-- colocar no banco e definir o 'name' -->
+                <br><br>
+                
+                <div>
+                    <label>Sim</label>
+                    <input type="radio" name="rec_pub" value="Sim">
+                    <label>Não</label>
+                    <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
+                    <input type="radio" name="rec_pub" value="Não">
+                </div>
+                <br><br>
+                
+                <label>Você toma atualmente algum tipo de medicação<br> de uso contínuo?</label> <!-- colocar no banco e definir o 'name' -->
+                <br><br>
+                
+                <div>
+                    <label>Sim</label>
+                    <input type="radio" name="rec_pub" value="Sim">
+                    <label>Não</label>
+                    <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
+                    <input type="radio" name="rec_pub" value="Não">
+                </div>
+                <br><br>
+                
+                <label>Você realiza algum tipo de tratamento médico para<br> pressão arterial ou problemas cardíacos?</label> <!-- colocar no banco e definir o 'name' -->
+                <br><br>
+                
+                <div>
+                    <label>Sim</label>
+                    <input type="radio" name="rec_pub" value="Sim">
+                    <label>Não</label>
+                    <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
+                    <input type="radio" name="rec_pub" value="Não">
+                </div>
+                <br><br>
+                
+                <label>Você realiza algum tratamento médico contínuo, que<br> possa ser afetado ou prejudicado com a atividade física?</label> <!-- colocar no banco e definir o 'name' -->
+                <br><br>
+                
+                <div>
+                    <label>Sim</label>
+                    <input type="radio" name="rec_pub" value="Sim">
+                    <label>Não</label>
+                    <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
+                    <input type="radio" name="rec_pub" value="Não">
+                </div>
+                <br><br>
+                
+                <label>Você já se submeteu a algum tipo de cirurgia, que<br> comprometa de
+                    alguma forma a atividade física?</label> <!-- colocar no banco e definir o 'name' -->
+                <br><br>
+                
+                <div>
+                    <label>Sim</label>
+                    <input type="radio" name="rec_pub" value="Sim">
+                    <label>Não</label>
+                    <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
+                    <input type="radio" name="rec_pub" value="Não">
+                </div>
+                <br><br>
+                
+                <label>Sabe de alguma outra razão pela qual a atividade física<br> possa
+                    eventualmente comprometer sua saúde?</label> <!-- colocar no banco e definir o 'name' -->
+                <br><br>
+                
+                <div>
+                    <label>Sim</label>
+                    <input type="radio" name="rec_pub" value="Sim">
+                    <label>Não</label>
+                    <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
+                    <input type="radio" name="rec_pub" value="Não">
+                </div>
+                <br><br>
+                
+
+                <input class="baaaaaaa" type="submit" value="Enviar">
+                <br>
+
             </div>
         </form>
         <?php
         if (isset($_GET["nome"])) {
-            $nome = $_GET["nome"];
-            $email = $_GET["email"];
-            $data = $_GET["data"];
-            $hora = $_GET["hora"];
-            $rec_pub = $_GET["rec_pub"];
+            $nome = $_GET["nome"]; // pronto no BD
+            $email = $_GET["email"]; // pronto no BD
+            $data = $_GET["data"]; // pronto no BD
+            $hora = $_GET["hora"]; // pronto no BD
+            $rec_pub = $_GET["rec_pub"]; // pronto no BD
             /* indica o q vai ser feito no BD, no caso, inserção
              * cadastro é o nome da tabela que iremos inserir dados
              * os dados que vão no primeiro parenteses são os nomes dos atributos inseridos no BD e no segundo parensteses o nome dos identificadores dos inputs acompanhados de dois pontos (:)
