@@ -57,7 +57,7 @@ include "./conexao.php";
             }
             .martex{
                 margin-left: 300px;
-                margin-right: 300px;
+                
             }
         </style>
     </head>
@@ -65,16 +65,16 @@ include "./conexao.php";
         <form method="GET" action="cadastrar.php">
 
             <br><br>
+<legend align="center"><strong>Cadastre-se</strong></legend>
             
-            <div align="center">
-
-                <legend><strong>Cadastre-se</strong></legend>
+            <div align="" class="martex">
+                
                 <br>
-                <label>Data de cadastro:</label> <!-- colocar no banco e definir o 'name' -->
+                <label>Data de cadastro:</label><br> <!-- colocar no banco e definir o 'name' -->
                 <input type="date" name="nome">
                 <br><br>
                 
-                <input type="text" name="nome" placeholder="Nome">
+                <input type="text" name="nome" placeholder="Nome completo">
                 <br><br>
                 
                 <!-- colocar no banco e definir o 'name' -->
@@ -85,17 +85,17 @@ include "./conexao.php";
                 <input type="text" name="nome"placeholder="CPF">
                 <br><br>
                 
-                <label>Sexo:</label> <!-- colocar no banco e definir o 'name' -->
-                <br>
-                <label>Masculino</label>
+                <label>Sexo:</label><br> <!-- colocar no banco e definir o 'name' -->
+                <br>                
                 <input type="radio" name="sexo" value="m">
-                <label>Feminino</label>
+                <label>Masculino</label>                
                 <input type="radio" name="sexo" value="f">
-                <label>Outro</label>
+                <label>Feminino</label>                
                 <input type="radio" name="sexo" value="o"> 
+                <label>Outro</label>
                 <br><br>
                 
-                <label>Estado civil:</label> <!-- colocar no banco e definir o 'name' -->
+                <label>Estado civil:</label><br> <!-- colocar no banco e definir o 'name' -->
                 <select>
                     <option name='Solteiro'>Solteiro</option>
                     <option name='Casado'>Casado</option>
@@ -103,7 +103,7 @@ include "./conexao.php";
                 </select>
                 <br><br>
                 
-                <label>Escolaridade:</label> <!-- colocar no banco e definir o 'name' -->
+                <label>Escolaridade:</label><br> <!-- colocar no banco e definir o 'name' -->
                 <select>
                     <option name='EFI'>Ensino Fundamental Incompleto</option>
                     <option name='EFC'>Ensino Fundamental Completo</option>
@@ -121,7 +121,7 @@ include "./conexao.php";
                 <input type="text" name="nome" placeholder="Profissão">
                 <br><br>
                 
-                <label>Data de nascimento:</label>
+                <label>Data de nascimento:</label><br>
                 <input type="date" name="data">
                 <br><br>
                 
@@ -161,15 +161,15 @@ include "./conexao.php";
                 <input type="text" name="nome" placeholder="Peso">
                 <br><br>
                 
-                <label>Dia(s) da semana de aula:</label> <!-- colocar no banco e definir o 'name' -->
+                <label>Dia(s) da semana de aula:</label><br> <!-- colocar no banco e definir o 'name' -->
                 <input type="date" name="nome">
                 <br><br>
                 
-                <label>Horário de início:</label> <!-- colocar no banco e definir o 'name' -->
+                <label>Horário de início:</label><br> <!-- colocar no banco e definir o 'name' -->
                 <input type="time" name="nome">
                 <br><br>
                 
-                <label>Tempo de aula:</label>
+                <label>Tempo de aula:</label><br>
                 <input type="time" name="hora">
                 <br><br>
                 
@@ -188,37 +188,45 @@ include "./conexao.php";
                 <label>Algum médico já disse que você possui<br>algum problema de coração
                     ou pressão arterial,<br>e que somente deveria realizar atividade física<br>
                     supervisionado por profissionais de saúde?</label>
+                <br><br>
+                
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                </div>
+                
+                <label>Não</label> </div>
                 <br><br>
                 
                 <label>Você sente dores no peito quando pratica<br> atividade física?</label> <!-- colocar no banco e definir o 'name' -->
                 <br><br>
                 
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                </div>
+                
+                <label>Não</label> </div>
                 <br><br>
                 
                 <label>No último mês, você sentiu dores no peito<br> ao praticar atividade física?</label> <!-- colocar no banco e definir o 'name' -->
                 <br><br>
                 
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                </div>
+                
+                <label>Não</label> </div>
                 <br><br>
                 
                 <label>Você apresenta algum desequilíbrio devido à<br> tontura e/ou perda
@@ -226,12 +234,14 @@ include "./conexao.php";
                 <br><br>
                 
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                </div>
+                
+                <label>Não</label> </div>
                 <br><br>
                 
                 <label>Você possui algum problema ósseo ou articular,<br> que pode ser
@@ -239,48 +249,56 @@ include "./conexao.php";
                 <br><br>
                 
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                </div>
+                
+                <label>Não</label> </div>
                 <br><br>
                 
                 <label>Você toma atualmente algum tipo de medicação<br> de uso contínuo?</label> <!-- colocar no banco e definir o 'name' -->
                 <br><br>
                 
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                </div>
+                
+                <label>Não</label> </div>
                 <br><br>
                 
                 <label>Você realiza algum tipo de tratamento médico para<br> pressão arterial ou problemas cardíacos?</label> <!-- colocar no banco e definir o 'name' -->
                 <br><br>
                 
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                </div>
+                
+                <label>Não</label> </div>
                 <br><br>
                 
                 <label>Você realiza algum tratamento médico contínuo, que<br> possa ser afetado ou prejudicado com a atividade física?</label> <!-- colocar no banco e definir o 'name' -->
                 <br><br>
                 
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                </div>
+                
+                <label>Não</label> </div>
                 <br><br>
                 
                 <label>Você já se submeteu a algum tipo de cirurgia, que<br> comprometa de
@@ -288,12 +306,14 @@ include "./conexao.php";
                 <br><br>
                 
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
-                </div>
+                
+                <label>Não</label> </div>
                 <br><br>
                 
                 <label>Sabe de alguma outra razão pela qual a atividade física<br> possa
@@ -301,11 +321,13 @@ include "./conexao.php";
                 <br><br>
                 
                 <div>
-                    <label>Sim</label>
+                    
                     <input type="radio" name="rec_pub" value="Sim">
-                    <label>Não</label>
+                    <label>Sim</label>
+                    
                     <!--No radio vai ser salvo no banco 1 para sim o 0 para não, pois o rec_pub boleano-->
                     <input type="radio" name="rec_pub" value="Não">
+                    <label>Não</label>
                 </div>
                 <br><br>
                 
